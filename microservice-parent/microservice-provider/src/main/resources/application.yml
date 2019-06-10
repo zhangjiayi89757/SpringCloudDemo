@@ -1,0 +1,15 @@
+server:
+  port: 8002
+
+spring:
+  application:
+    name: microservicecloud-provider # 微服务的名字
+
+# 把provider微服务注册进http://localhost:9001/eureka指示的服务中
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka9001.com:9001/eureka/,http://eureka9002.com:9002/eureka/,http://eureka9003.com:9003/eureka/
+  instance:
+    instance-id: provider8002 # 自定义服务名称信息
+    prefer-ip-address: true # 访问路径可以显示IP地址
