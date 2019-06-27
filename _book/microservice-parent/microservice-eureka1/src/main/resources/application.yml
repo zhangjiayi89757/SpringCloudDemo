@@ -1,0 +1,13 @@
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    # 通过设置register-with-eureka和feth-registry表明自己是一个eureka-server
+    register-with-eureka: false # true表示服务注册中心也会将自己作为客户端尝试注册自己
+    fetch-registry: false # 检索服务选项，注册中心不负责检索服务
+    service-url:
+      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://eureka9002.com:9002/eureka/,http://eureka9003.com:9003/eureka/
+
+server:
+  port: 9001
