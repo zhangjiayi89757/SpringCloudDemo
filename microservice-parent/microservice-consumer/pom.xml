@@ -57,6 +57,18 @@
             <version>1.3.5.RELEASE</version>
         </dependency>
 
+        <!-- sleuth相关 -->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.cloud</groupId>-->
+            <!--<artifactId>spring-cloud-starter-sleuth</artifactId>-->
+        <!--</dependency>-->
+
+        <!-- sleuth + zipkin -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId><!--包含sleuth-->
+        </dependency>
+
     </dependencies>
 
 </project>
